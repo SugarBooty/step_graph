@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager
 import com.example.stepgraph.databinding.FragmentFirstBinding
 import com.github.mikephil.charting.charts.PieChart
 
@@ -17,6 +18,7 @@ class FirstFragment() : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
     lateinit var pieChartHandler: PieChartHandler
+    var stepGoalStr: String? = null
     val debugTag = "FirstFragment_DEBUG"
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -33,13 +35,24 @@ class FirstFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        on click listener for "Next" button that navigates to the second fragment
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
-        pieChartHandler.generatePieData(3445.0f, 6000.0f)
+        loadSettings()
+
+        val stepGoal = stepGoalStr!!.toFloat()
+
+        pieChartHandler.generatePieData(2500.0f, stepGoal)
         pieChartHandler.triggerAnimate()
 
+    }
+
+    fun loadSettings() {
+        val preferenceManager = PreferenceManager.getDefaultSharedPreferences(context)
+
+        stepGoalStr = preferenceManager.getString("step_goal", "10000")
     }
 
     fun goToNextView() {

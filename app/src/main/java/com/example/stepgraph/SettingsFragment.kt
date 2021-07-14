@@ -5,7 +5,8 @@ import androidx.preference.PreferenceFragmentCompat
 
 /*
 Settings needed:
-- Data polling period (default 10 minutes)
+- X Step goal
+- X Data polling period (default 10 minutes)
 - X Todays step graph, cumulative or steps/period (default cumulative)
 - X Step distance (default 70cm)
 - X Light/dark theme (default dark)
@@ -18,4 +19,5 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
     }
+
 }

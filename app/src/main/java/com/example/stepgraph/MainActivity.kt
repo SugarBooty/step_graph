@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+//        actionBar!!.setDisplayHomeAsUpEnabled(true)
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -51,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         if (ContextCompat.checkSelfPermission(this, ACTIVITY_SERVICE) == PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACTIVITY_RECOGNITION), 1)
         }
-        Log.d(debugTag, this.toString())
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

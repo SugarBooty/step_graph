@@ -3,6 +3,11 @@
 
     <PreferenceCategory app:title="@string/settings_title_graphical">
 
+        <EditTextPreference
+            app:key="step_goal"
+            app:title="@string/settings_step_goal"
+            app:defaultValue="10000"
+            app:useSimpleSummaryProvider="true" />
 
 
         <ListPreference

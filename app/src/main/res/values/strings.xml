@@ -29,6 +29,9 @@
     <string name="settings_title_behavior">Behavior</string>
 
 <!-- App Settings -->
+    <!-- Step goal -->
+    <string name="settings_step_goal">Step Goal</string>
+
     <!-- Polling setting -->
     <string name="settings_polling_period">Polling Period</string>
     <string name="settings_polling_period_summary">How often to log the steps are logged</string>
