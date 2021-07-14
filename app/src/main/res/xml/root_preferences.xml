@@ -1,0 +1,54 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/settings_title_graphical">
+
+
+
+        <ListPreference
+            app:defaultValue="cum"
+            app:entries="@array/graph_style"
+            app:entryValues="@array/graph_style_entries"
+            app:key="graph_style"
+            app:title="@string/settings_graph_style"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="auto"
+            app:entries="@array/app_theme"
+            app:entryValues="@array/app_theme_entries"
+            app:key="app_theme"
+            app:title="@string/settings_app_theme"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_title_behavior">
+
+        <EditTextPreference
+            app:key="stride_length"
+            app:title="@string/settings_step_distance"
+            app:summary="@string/settings_step_distance_summary" />
+        <!--            app:useSimpleSummaryProvider="true" />-->
+
+        <SwitchPreferenceCompat
+            app:key="persistent_notification"
+            app:title="@string/settings_persistent_notification"
+            app:defaultValue="1"/>
+
+
+        <EditTextPreference
+            app:key="polling_interval"
+            app:title="@string/settings_polling_period"
+            app:summary="@string/settings_polling_period_summary" />
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:dependency="sync"-->
+<!--            app:key="attachment"-->
+<!--            app:summaryOff="@string/attachment_summary_off"-->
+<!--            app:summaryOn="@string/attachment_summary_on"-->
+<!--            app:title="@string/attachment_title" />-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

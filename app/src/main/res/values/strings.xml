@@ -9,4 +9,45 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+<!-- Settings Titles -->
+    <string name="settings_title_graphical">Graphical</string>
+    <string name="settings_title_behavior">Behavior</string>
+
+<!-- App Settings -->
+    <!-- Polling setting -->
+    <string name="settings_polling_period">Polling Period</string>
+    <string name="settings_polling_period_summary">How often to log the steps are logged</string>
+    <string name="settings_minutes">Minutes</string>
+
+    <!-- Graph style -->
+    <string name="settings_graph_style">Graph Style</string>
+
+    <!-- Step Distance -->
+    <string name="settings_step_distance">Stride Length</string>
+    <string name="settings_step_distance_summary">Average length of a step, this can be left at default</string>
+
+    <!-- App Theme -->
+    <string name="settings_app_theme">App Theme</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_automatic">Automatic</string>
+
+    <!-- Persistent Notification -->
+    <string name="settings_persistent_notification">Persistent Notification</string>
+
 </resources>

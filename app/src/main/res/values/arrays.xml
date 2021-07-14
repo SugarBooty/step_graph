@@ -1,0 +1,34 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="graph_style">
+        <item>Cumulative</item>
+        <item>Step Rate</item>
+    </string-array>
+
+    <string-array name="graph_style_entries">
+        <item>cum</item>
+        <item>rate</item>
+    </string-array>
+
+    <string-array name="app_theme">
+        <item>Automatic</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="app_theme_entries">
+        <item>auto</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+</resources>
