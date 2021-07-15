@@ -19,7 +19,9 @@ import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager
 import com.example.stepgraph.databinding.ActivityMainBinding
+import java.security.AccessController.getContext
 
 class MainActivity : AppCompatActivity() {
 

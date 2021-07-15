@@ -9,6 +9,11 @@
             app:defaultValue="10000"
             app:useSimpleSummaryProvider="true" />
 
+        <EditTextPreference
+            app:key="animation_time"
+            app:title="@string/settings_animation_time"
+            app:defaultValue="1000"
+            app:useSimpleSummaryProvider="true" />
 
         <ListPreference
             app:defaultValue="cum"

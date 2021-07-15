@@ -17,6 +17,7 @@ class PieChartHandler(view: View){
     var pieChart = view.findViewById<PieChart>(R.id.PieChartBaby)
     val currentStepsText = view.findViewById<TextView>(R.id.currentStepsText)
     val stepsGoalText = view.findViewById<TextView>(R.id.stepGoalText)
+    var animationTime = 1000
 
     fun generatePieData(steps: Float, goal: Float) {
         Log.d(debugTag, "Generating pie chart data... Steps: $steps, goal $goal")
@@ -61,6 +62,6 @@ class PieChartHandler(view: View){
 
     fun triggerAnimate() {
         Log.d(debugTag, "Pie chart animation triggered")
-        pieChart.animateY(1000, com.github.mikephil.charting.animation.Easing.EaseInOutQuad)
+        pieChart.animateY(animationTime, com.github.mikephil.charting.animation.Easing.EaseInOutQuad)
     }
 }

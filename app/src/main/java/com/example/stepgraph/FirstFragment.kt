@@ -23,6 +23,7 @@ class FirstFragment() : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    var animationTime = 1000
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,11 +46,12 @@ class FirstFragment() : Fragment() {
         val stepGoal = stepGoalStr!!.toFloat()
 
         pieChartHandler.generatePieData(2500.0f, stepGoal)
+        pieChartHandler.animationTime = animationTime
         pieChartHandler.triggerAnimate()
 
     }
 
-    fun loadSettings() {
+    private fun loadSettings() {
         val preferenceManager = PreferenceManager.getDefaultSharedPreferences(context)
 
         stepGoalStr = preferenceManager.getString("step_goal", "10000")
